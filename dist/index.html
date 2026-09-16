@@ -2759,14 +2759,14 @@ like that. do not redistribute. -->
     </div>
     <!-- External JavaScript -->
 
-    <script defer src="/umami.js" data-website-id="42f50224-3377-4935-b182-02216014086a"></script>
+    <script defer src="/umami.js" data-website-id="42f50224-3377-4935-b182-02216014086a" data-performance="true"></script>
     <script defer src="/umami-kit.js"></script>
     <script>
       document.querySelector('script[src="/umami-kit.js"]').addEventListener("load", () => {
         const kit = new UmamiTracker({
-          debug: true,
+          debug: false,
           autoTrackAllClicks: true, // Track ALL clickable elements
-          scrollDepthThresholds: [25, 50, 75, 90],
+          scrollDepthThresholds: [1, 3, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 99, 100],
           heartbeatInterval: 30000,
         });
       });
