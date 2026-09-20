@@ -126,6 +126,12 @@ html.asw-stop-animations * {
     transition: transform .3s ease-in-out;
 }
 
+html.aws-filter .card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background-color: rgb(253 248 246 / 100%) !important;
+}
+
 .option.card:hover {
     transform: translateY(-5px);
 }
@@ -957,10 +963,11 @@ md-text-button {
 
 a {
     color: var(--md-sys-color-secondary);
+    transition: background-color 0.2s ease-in-out;
 }
 
 a:hover {
-    background-color: #7cbdff29 !important;
+    background-color: #7cbdff29;
 
 }
 
@@ -1609,7 +1616,7 @@ md-linear-progress {
 
 a[href^="#"] {
     color: black;
-    background-color: #cbe6ff45;
+    /* background-color: #cbe6ff45; */
     transition: background-color 0.3s ease-in-out;
 }
 
