@@ -34,11 +34,11 @@
     <meta name="ICBM" content="44.9778, 93.2650" />
     <meta name="geo.region" content="US-MN" />
     <meta name="geo.placename" content="Minnesota, United States" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.ampproject.org" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link rel="preconnect" href="https://cdn.ampproject.org" /> -->
     <!-- Material Design 3 CSS -->
-    <link
+    <!-- <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block&icon_names=accessibility,account_balance,add_notes,attach_money,badge,balance,bolt,bug_report,celebration,check_circle,close,code,coffee,comment,construction,contract_edit,credit_card,delete,download,drive_file_rename_outline,edit_document,email,expand_less,expand_more,favorite,flight,gavel,hourglass_top,id_card,info,language,local_hospital,local_police,mail,menu,open_in_new,paid,picture_as_pdf,receipt_long,report,rocket_launch,save,search,security,send,share,shield,transgender,upload_file,verified,visibility,volunteer_activism,warning"
       as="style"
@@ -46,7 +46,7 @@
         this.onload = null;
         this.rel = 'stylesheet';
       "
-    />
+    /> -->
     <!-- <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=block"
       rel="preload"
@@ -135,7 +135,7 @@
         "Bark Bark Bark!",
         "Contribute to open source projects.",
         "Punch your local fascist.",
-        "Throw a brick at a cop car",
+        "Throw a brick at a cop car", // (not a call to action) not even historically accurate either, but it has a nice ring to it
       ];
 
       // show random quip on page load
@@ -2787,7 +2787,7 @@ like that. do not redistribute. -->
       document.querySelector('script[src="/umami-kit.js"]').addEventListener("load", () => {
         const kit = new UmamiTracker({
           debug: false,
-          autoTrackAllClicks: true, // Track ALL clickable elements
+          autoTrackAllClicks: true, // Track ALL clickable elements (except those deny-listed)
           scrollDepthThresholds: [1, 3, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 99, 100],
           heartbeatInterval: 30000,
         });
@@ -2795,7 +2795,7 @@ like that. do not redistribute. -->
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script>
+    <!-- <script>
       setTimeout(() => {
         const gtagScript = document.createElement("script");
         gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-ZQTGQ207FY";
@@ -2812,6 +2812,6 @@ like that. do not redistribute. -->
       gtag("js", new Date());
       gtag("config", "G-ZQTGQ207FY");
       gtag("config", "AW-18033381211"); // Ads ID
-    </script>
+    </script> -->
   </body>
 </html>
