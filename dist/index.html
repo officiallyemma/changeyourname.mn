@@ -36,9 +36,9 @@
     <meta name="ICBM" content="44.9778, 93.2650" />
     <meta name="geo.region" content="US-MN" />
     <meta name="geo.placename" content="Minnesota, United States" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.ampproject.org" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link rel="preconnect" href="https://cdn.ampproject.org" /> -->
     <!-- Material Design 3 CSS -->
     <!-- <link
       rel="preload"
@@ -138,7 +138,7 @@
         "Bark Bark Bark!",
         "Contribute to open source projects.",
         "Punch your local fascist.",
-        "Throw a brick at a cop car",
+        "Throw a brick at a cop car", // (not a call to action) not even historically accurate either, but it has a nice ring to it
       ];
 
       // show random quip on page load
@@ -1087,7 +1087,7 @@ like that. do not redistribute. -->
                 <a href="https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines" target="_blank"
                   >current year federal poverty guidelines</a
                 >
-                you are eligible for a fee waiver.
+                you should be eligible for a fee waiver.
               </p>
               <p>
                 <strong>For 2026, this number is $19,950/yr for a single person.</strong>
@@ -1096,8 +1096,8 @@ like that. do not redistribute. -->
             <div class="sub-card sub-card--highlight">
               <h3>By Participation in Government Assistance Programs</h3>
               <p>
-                If you are supported by any form of income-based government assistance, you are eligible for a fee waiver. This includes (but is not
-                limited to): SNAP, SSI, Section 8 Housing, etc.
+                If you are supported by any form of income-based government assistance, you should be eligible for a fee waiver. This includes (but is
+                not limited to): SNAP, SSI, Section 8 Housing, etc.
               </p>
             </div>
             <div class="sub-card sub-card--highlight">
@@ -1160,6 +1160,12 @@ like that. do not redistribute. -->
                                     MN Volunteer Lawyer's Network
                                 </md-outlined-button>
                             </div> -->
+          </div>
+          <div class="resources">
+            <md-outlined-button data-umami-track onclick="window.open('https://mncourts.gov/help-topics/fee-waiver-ifp', '_blank')">
+              <span class="material-symbols-outlined" slot="icon">open_in_new</span>
+              MN Courts: More information on the fee waiver process
+            </md-outlined-button>
           </div>
         </div>
 
@@ -1646,7 +1652,7 @@ like that. do not redistribute. -->
             </div>
           </div>
         </div>
-        <div class="card">
+        <!-- <div class="card">
           <p>
             <strong>Optional:</strong>
             If you want to speedrun the process, skip forward to
@@ -1655,7 +1661,7 @@ like that. do not redistribute. -->
             out so plan accordingly if you want to move as fast as possible. You only need the certified copy in hand when you arrive at the
             appointment, so you can schedule the appointment before you have the necessary documents.
           </p>
-        </div>
+        </div> -->
         <!-- Section 8: Go to the hearing -->
         <div class="card guide-section" id="hearing">
           <div class="section-header">
@@ -2519,13 +2525,13 @@ like that. do not redistribute. -->
             </div>
             <div class="card sensitive-content">
               <p class="consent-txt">
-                The content that proceeds contains a discussion of sexual assault.
+                The content that proceeds contains a discussion of assault.
                 <a class="consent-btn">(peek)</a>
                 <a class="anti-consent-btn">(hide this section)</a>
               </p>
 
               <p class="consentscreen" style="line-height: 1.5em" data-umami-track>
-                In mid 2025, while traveling for work, I experienced what I would describe as a <span class="consent">sexual assault</span> during
+                In mid 2025, while traveling for work, I experienced what I would describe as an <span class="consent">assault</span> during
                 <span class="consent">TSA</span> screening at a Michigan airport. I was told I was selected for
                 <span class="consent">additional screening</span> due to my appearance, clothing, and perceived Transgender status. After I objected
                 to being screened by a <span class="consent">male officer</span>, I was taken to a <span class="consent">private room</span> and told
@@ -2535,11 +2541,10 @@ like that. do not redistribute. -->
                 <span class="consent">complied</span> because I believed I had <span class="consent">no safe alternative</span>. I want to be clear
                 about what that means:
                 <b>compliance under threats and coercion is not voluntary consent.</b>
+                The experience was deeply traumatic and has had a lasting impact on me. I no longer feel comfortable traveling for work.
               </p>
 
               <div style="line-height: 1.5em">
-                <p>The experience was deeply traumatic and has had a lasting impact on me. I no longer feel comfortable traveling for work.</p>
-
                 <p>But I also think it is important to understand this experience as something larger than one terrible encounter at an airport.</p>
 
                 <p>
@@ -2549,10 +2554,9 @@ like that. do not redistribute. -->
 
                 <p><b>Do Trans people actually have the freedom to control our own lives, our own identities, and our own bodies?</b></p>
 
-                <p>
-                  That freedom cannot exist if being Transgender makes us subject to extraordinary scrutiny, or if asserting bodily autonomy can be
-                  met with threats of police intervention.
-                </p>
+                <!-- <p>
+                  That freedom cannot exist if being Transgender makes us subject to extraordinary scrutiny.
+                </p> -->
 
                 <p><b>We need the power to live freely, not merely the permission to exist.</b></p>
 
@@ -2634,7 +2638,9 @@ like that. do not redistribute. -->
                   <div class="support-option-content">
                     <h3>Spread the Word</h3>
                     <p>Share this guide with someone you know who might find it helpful. Word of mouth helps more people find this resource.</p>
-                    <img height="400px" src="images/qrcode.webp" />
+                    <img height="150px" src="images/changeyourname_green_qr.png" />
+                    <img height="150px" src="images/changeyourname_red_qr.png" />
+                    <img height="150px" src="images/changeyourname_blue_qr.png" />
                   </div>
                 </div>
                 <div class="support-option contribute">
@@ -2735,7 +2741,7 @@ like that. do not redistribute. -->
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSe63PCfgMQcY5ZdZBdS4jjJTWzXlIk_dw0N2Dd7N4X0RXFpEA/viewform" target="_blank" rel="noopener"
           >MN Volunteer Lawyer's Network</a
         >
-        if you need it.
+        if you need it. Please don't sue me.
         <br />
         <a href="https://github.com/qwazwsx/changeyourname.mn" target="_blank" rel="noopener"> View source on GitHub </a>
         .
@@ -2789,7 +2795,7 @@ like that. do not redistribute. -->
       document.querySelector('script[src="/umami-kit.js"]').addEventListener("load", () => {
         const kit = new UmamiTracker({
           debug: false,
-          autoTrackAllClicks: true, // Track ALL clickable elements
+          autoTrackAllClicks: true, // Track ALL clickable elements (except those deny-listed)
           scrollDepthThresholds: [1, 3, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 99, 100],
           heartbeatInterval: 30000,
         });
@@ -2797,7 +2803,7 @@ like that. do not redistribute. -->
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script>
+    <!-- <script>
       setTimeout(() => {
         const gtagScript = document.createElement("script");
         gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-ZQTGQ207FY";
@@ -2814,6 +2820,6 @@ like that. do not redistribute. -->
       gtag("js", new Date());
       gtag("config", "G-ZQTGQ207FY");
       gtag("config", "AW-18033381211"); // Ads ID
-    </script>
+    </script> -->
   </body>
 </html>
