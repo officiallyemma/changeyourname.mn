@@ -87,6 +87,26 @@ document.addEventListener('DOMContentLoaded', (): void => {
 
 
     document.fonts.ready.then((): void => {
+
+
+        document.querySelectorAll('[umami-track-vis]').forEach((el: Element): void => {
+
+            const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]): void => {
+                entries.forEach((entry: IntersectionObserverEntry): void => {
+                    if (entry.isIntersecting) {
+                        const eventName = (el as HTMLElement).id || 'generic-el-scrolled-into-view';
+                        umami.track(eventName);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0
+            });
+            observer.observe(el);
+
+        });
+
+
         // const hash = fnv1a(document.body.innerText);
         // console.log(document.body.innerText, hash);
         // TODO: verify hash of page contents to ensure integrity of annotations, and to prevent loading annotations on an outdated version
@@ -1311,3 +1331,7 @@ document.querySelector('.undo-anti-consent-btn')?.addEventListener('click', () =
     window.location.reload();
 
 })
+
+
+
+
