@@ -2804,8 +2804,20 @@ like that. do not redistribute. -->
         });
       });
 
-      // document.querySelector('script[src="https://umami.changeyourname.mn/script.js"]').addEventListener("load", () => {
+      document.querySelector('script[src="https://umami.changeyourname.mn/script.js"]').addEventListener("load", () => {
+        const urlParams = new URLSearchParams(window.location.search);
 
+        const utmData = {};
+        ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((param) => {
+          if (urlParams.has(param)) {
+            utmData[param] = urlParams.get(param);
+          }
+        });
+
+        if (Object.keys(utmData).length > 0) {
+          umami.identify(utmData);
+        }
+      });
       // });
     </script>
 
