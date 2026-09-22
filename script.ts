@@ -74,19 +74,6 @@ interface AnnotationState {
     hovered?: boolean;
 }
 
-// // non cryptographic hash func I stole from stackoverflow
-// function fnv1a(str) {
-//     let hash = 0x811c9dc5; // offset basis
-
-//     for (let i = 0; i < str.length; i++) {
-//         hash ^= str.charCodeAt(i);
-//         hash = Math.imul(hash, 0x01000193); // prime
-//     }
-
-//     return hash >>> 0; // unsigned 32-bit
-// }
-let noiseKillSwitch = false;
-
 // Main JavaScript functionality for changeyourname.mn
 document.addEventListener('DOMContentLoaded', (): void => {
     // grab the skyline svg and inline it

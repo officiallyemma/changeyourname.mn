@@ -121,7 +121,8 @@ body {
 
 p,
 h3,
-a {
+a,
+* {
     font-display: swap;
 }
 

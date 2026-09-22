@@ -120,8 +120,8 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DCxAJ2KB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BXY-yGSv.css">
+    <script type="module" crossorigin src="/assets/index-SgD0uIJ8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DAloB_gK.css">
   </head>
 
   <body class="loading">
@@ -921,7 +921,12 @@ like that. do not redistribute. -->
                   <h3>Option 1: Use the Automatic Form Generator (recommended)</h3>
                 </div>
                 <p>Simply enter your information once and the website will auto fill all three PDFs for you</p>
-                <md-filled-button data-umami-track onclick="window.open('https://form-generator.changeyourname.mn/', '_blank')">
+                <md-filled-button
+                  data-umami-track
+                  data-umami-event="FormGeneratorBtnClick"
+                  class="form-generator-btn"
+                  onclick="window.open('https://form-generator.changeyourname.mn/', '_blank')"
+                >
                   <span class="material-symbols-outlined" slot="icon">open_in_new</span>
                   Open Form Generator
                 </md-filled-button>
@@ -2800,6 +2805,10 @@ like that. do not redistribute. -->
           heartbeatInterval: 30000,
         });
       });
+
+      // document.querySelector('script[src="https://umami.changeyourname.mn/script.js"]').addEventListener("load", () => {
+
+      // });
     </script>
 
     <!-- Google tag (gtag.js) -->
