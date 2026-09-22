@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', (): void => {
             const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]): void => {
                 entries.forEach((entry: IntersectionObserverEntry): void => {
                     if (entry.isIntersecting) {
-                        const eventName = (el as HTMLElement).id || 'generic-el-scrolled-into-view';
+                        const eventName = 'scrolled-to--' + (el as HTMLElement).id || 'generic-el-scrolled-into-view';
                         umami.track(eventName);
                         observer.unobserve(entry.target);
                     }
