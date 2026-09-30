@@ -2144,6 +2144,19 @@ div.options .option:hover {
     height: 200px;
 }
 
+.header-card svg.text .underline {
+    display: none;
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: stretch 1500ms ease-out 1.5s forwards;
+}
+
+@keyframes stretch {
+    to {
+        transform: scaleX(1);
+    }
+}
+
 @media screen and (max-width: 900px) {
     .header-card svg.text {
         left: -10%;
@@ -2157,6 +2170,10 @@ div.options .option:hover {
 
     .header-card h2 {
         font-size: 16px;
+    }
+
+    .header-card svg.text .underline {
+        display: block;
     }
 }
 
