@@ -2799,7 +2799,7 @@ like that. do not redistribute. -->
       data-website-id="5d893a3d-30d6-4290-a5e7-30048c509aa9"
       data-performance="true"
     ></script>
-    <script defer src="https://umami.changeyourname.mn/recorder.js" data-website-id="5d893a3d-30d6-4290-a5e7-30048c509aa9"></script>
+    <!-- <script defer src="https://umami.changeyourname.mn/recorder.js" data-website-id="5d893a3d-30d6-4290-a5e7-30048c509aa9"></script> -->
     <script defer src="/umami-kit.js"></script>
     <script>
       document.querySelector('script[src="/umami-kit.js"]').addEventListener("load", () => {
@@ -2814,6 +2814,8 @@ like that. do not redistribute. -->
       document.querySelector('script[src="https://umami.changeyourname.mn/script.js"]').addEventListener("load", () => {
         const urlParams = new URLSearchParams(window.location.search);
 
+        // if user has a urchin tracking code in the URL, send it to Umami for (anonymous) session tracking
+        // to be used for tracking QR code use on printed materials
         const utmData = {};
         ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((param) => {
           if (urlParams.has(param)) {
@@ -2824,6 +2826,10 @@ like that. do not redistribute. -->
         if (Object.keys(utmData).length > 0) {
           umami.identify(utmData);
         }
+
+        // on page load, assess how many steps have been marked completed
+        const completedSteps = document.querySelectorAll(".saveable[value='true']").length;
+        umami.track("steps_completed", { completed_steps: completedSteps });
       });
       // });
     </script>
