@@ -2827,7 +2827,13 @@ like that. do not redistribute. -->
 
         // on page load, assess how many steps have been marked completed
         function reportCompletedSteps() {
-          const completedSteps = document.querySelectorAll(".saveable[value='true']").length;
+          let completedSteps = 0;
+          document.querySelectorAll(".saveable").forEach((checkbox) => {
+            if (checkbox.value === true || checkbox.checked == "checked") {
+              completedSteps++;
+            }
+          });
+
           umami.track("steps_completed", { completed_steps: completedSteps });
         }
 
