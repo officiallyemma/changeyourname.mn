@@ -2828,8 +2828,18 @@ like that. do not redistribute. -->
         }
 
         // on page load, assess how many steps have been marked completed
-        const completedSteps = document.querySelectorAll(".saveable[value='true']").length;
-        umami.track("steps_completed", { completed_steps: completedSteps });
+        function reportCompletedSteps() {
+          const completedSteps = document.querySelectorAll(".saveable[value='true']").length;
+          umami.track("steps_completed", { completed_steps: completedSteps });
+        }
+
+        reportCompletedSteps();
+
+        document.querySelectorAll(".saveable").forEach((checkbox) => {
+          checkbox.addEventListener("change", () => {
+            reportCompletedSteps();
+          });
+        });
       });
       // });
     </script>
