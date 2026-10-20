@@ -120,8 +120,8 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-Gp6qS-1c.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CIv_hQxD.css">
+    <script type="module" crossorigin src="/assets/index-BJZx5_eU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-V_-neY3t.css">
   </head>
 
   <body class="loading">
@@ -1170,12 +1170,13 @@ like that. do not redistribute. -->
                                     MN Volunteer Lawyer's Network
                                 </md-outlined-button>
                             </div> -->
-          </div>
-          <div class="resources">
-            <md-outlined-button data-umami-track onclick="window.open('https://mncourts.gov/help-topics/fee-waiver-ifp', '_blank')">
-              <span class="material-symbols-outlined" slot="icon">open_in_new</span>
-              MN Courts: More information on the fee waiver process
-            </md-outlined-button>
+
+            <div class="resources">
+              <md-outlined-button data-umami-track onclick="window.open('https://mncourts.gov/help-topics/fee-waiver-ifp', '_blank')">
+                <span class="material-symbols-outlined" slot="icon">open_in_new</span>
+                MN Courts: More information on the fee waiver process
+              </md-outlined-button>
+            </div>
           </div>
         </div>
 
@@ -2831,19 +2832,25 @@ like that. do not redistribute. -->
         function reportCompletedSteps() {
           let completedSteps = 0;
           document.querySelectorAll(".saveable").forEach((checkbox) => {
-            if (checkbox.value === true || checkbox.checked == "checked") {
+            if (checkbox.value === true || checkbox.checked) {
               completedSteps++;
             }
           });
 
+          console.log(`Reporting ${completedSteps} completed steps to Umami`);
+
           umami.track("steps_completed", { completed_steps: completedSteps });
         }
 
-        reportCompletedSteps();
+        setTimeout(() => {
+          reportCompletedSteps();
+        }, 1000);
 
         document.querySelectorAll(".saveable").forEach((checkbox) => {
           checkbox.addEventListener("change", () => {
-            reportCompletedSteps();
+            setTimeout(() => {
+              reportCompletedSteps();
+            }, 1000);
           });
         });
       });

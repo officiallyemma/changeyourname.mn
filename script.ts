@@ -35,8 +35,10 @@ new Image().src = 'images/skyline.svg'
 
 // dirty hack 2
 document.querySelectorAll('.loader-container, .loading').forEach((el: Element): void => {
-    console.log('loader clicked')
-    document.body.classList.remove('loading');
+    // console.log('loader clicked')
+    el.addEventListener('click', (): void => {
+        document.body.classList.remove('loading');
+    })
 })
 
 setTimeout(() => {

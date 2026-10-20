@@ -461,7 +461,7 @@ md-text-button {
     display: flex;
     justify-content: center;
     gap: 24px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     position: relative;
     top: -15px;
@@ -2166,6 +2166,7 @@ div.options .option:hover {
         align-self: center;
         /* width: 900px; */
         height: 150px;
+        transform: scale(.9);
     }
 
     .header-card h2 {
