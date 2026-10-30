@@ -2178,6 +2178,16 @@ div.options .option:hover {
     }
 }
 
+
+@media screen and (max-width: 550px) {
+
+    .headline-container img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
 #runaway-btn {
     /* position: absolute; */
     /* transition: transform 0.15s ease; */
@@ -2239,4 +2249,9 @@ div.options .option:hover {
 
 .hidden-anti-consent-container {
     text-align: center;
+}
+
+
+ul.formgenerator-procon {
+    list-style-type: none;
 }

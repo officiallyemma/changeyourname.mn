@@ -1,0 +1,18 @@
+<!-- 
+
+fetch /api/websites/{websiteId}/sessions
+
+Pass startAt and endAt as Unix timestamps in milliseconds. Paginate through the results so your chart includes every record in the selected date range.
+
+For each record, request its details or activity if necessary:
+GET /api/websites/{websiteId}/sessions/{sessionId}/activity
+
+
+The activity endpoint provides individual event timestamps. That helps distinguish multiple-event visits from visits with only one recorded pageview.
+
+-->
+<html lang="en">
+  <body>
+    <script language="ts" type="module" src="newmamiTime.ts"></script>
+  </body>
+</html>
