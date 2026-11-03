@@ -451,7 +451,7 @@ like that. do not redistribute. -->
           </h2>
 
           <div class="options">
-            <div class="option card">
+            <div class="option card" style="cursor: pointer" onclick="window.location.href = '#introduction'">
               <span class="material-symbols-outlined">id_card</span>
               <h2>Change Your Name</h2>
               <p>
@@ -557,13 +557,15 @@ like that. do not redistribute. -->
             </p>
           </div>
           <div class="sub-card sub-card--info">
-            <span class="material-symbols-outlined"> volunteer_activism </span>
-            <p>
-              This project is not associated with or funded by any advocacy organizations. 100% of the costs to run this site have been covered by
-              myself and generous donors
-              <br />
-              (<a href="https://ko-fi.com/emmazimbinski" target="_blank">like you</a>).
-            </p>
+            <a href="https://ko-fi.com/emmazimbinski" target="_blank" style="text-decoration: none; color: var(--md-sys-color-on-background)">
+              <span class="material-symbols-outlined"> volunteer_activism </span>
+              <p>
+                This project is not associated with or funded by any advocacy organizations. 100% of the costs to run this site have been covered by
+                myself and generous donors
+                <br />
+                (<a href="https://ko-fi.com/emmazimbinski" target="_blank">like you</a>).
+              </p>
+            </a>
           </div>
           <div class="sub-card sub-card--info">
             <span class="material-symbols-outlined"> bolt </span>
@@ -620,7 +622,12 @@ like that. do not redistribute. -->
           <div class="section-header">
             <div class="section-header-title">
               <span class="material-symbols-outlined section-icon" aria-hidden="true">warning</span>
-              <h2>0.) Requirements and Assumptions</h2>
+              <div class="section-title-subtitle">
+                <h2>0.) Requirements and Assumptions</h2>
+                <div class="section-summary">
+                  <!-- This guide makes some assumptions to simplify things. Reach out to community resources if you have concerns. -->
+                </div>
+              </div>
             </div>
             <div class="section-header-buttons">
               <md-checkbox data-umami-track touch-target="wrapper" class="saveable" value="false" id="introduction-checkbox"></md-checkbox>
@@ -900,7 +907,10 @@ like that. do not redistribute. -->
           <div class="section-header">
             <div class="section-header-title">
               <span class="material-symbols-outlined section-icon" aria-hidden="true">contract_edit</span>
-              <h2>1.) Prepare the forms you'll need</h2>
+              <div class="section-title-subtitle">
+                <h2>1.) Prepare the forms you'll need</h2>
+                <!-- <div class="section-summary">You'll need to fill out some paperwork.</div> -->
+              </div>
             </div>
             <div class="section-header-buttons">
               <md-checkbox touch-target="wrapper" class="saveable" value="false" id="prepare-forms-checkbox"></md-checkbox>
@@ -1072,7 +1082,10 @@ like that. do not redistribute. -->
           <div class="section-header">
             <div class="section-header-title">
               <span class="material-symbols-outlined section-icon" aria-hidden="true">attach_money</span>
-              <h2>2.) Determine if you qualify for financial assistance</h2>
+              <div class="section-title-subtitle">
+                <h2>2.) Determine if you qualify for financial assistance</h2>
+                <!-- <div class="section-summary">You have to pay a fee to file your paperwork, check to see if you are eligible for an exemption.</div> -->
+              </div>
             </div>
             <div class="section-header-buttons">
               <md-checkbox data-umami-track touch-target="wrapper" class="saveable" value="false" id="financial-assistance-checkbox"></md-checkbox>
@@ -1182,7 +1195,10 @@ like that. do not redistribute. -->
           <div class="section-header">
             <div class="section-header-title">
               <span class="material-symbols-outlined section-icon" aria-hidden="true">upload_file</span>
-              <h2>3.) File your forms with the court</h2>
+              <div class="section-title-subtitle">
+                <h2>3.) File your forms with the court</h2>
+                <!-- <div class="section-summary">Submit your forms to the court using the online "E-File" system.</div> -->
+              </div>
             </div>
             <div class="section-header-buttons">
               <md-checkbox data-umami-track touch-target="wrapper" class="saveable" value="false" id="file-forms-checkbox"></md-checkbox>
@@ -1647,6 +1663,8 @@ like that. do not redistribute. -->
                 "
               >
                 <p>
+                  SUBJECT: [#AB-123-456]: Request to schedule a hearing
+                  <br />
                   To the chambers of [District Court Judge Sarah Smith],
                   <br />
                   Hello. I'm seeking to change my legal name and gender marker. I have filed the appropriate paperwork and have been assigned case
@@ -1654,7 +1672,9 @@ like that. do not redistribute. -->
                   <br />
                   What, if any, upcoming dates do you have available? <br />
                   I appreciate your time, <br />
-                  Jane Doe youremail@example.com 123.456.7890
+                  Jane (Deadname) Doe <br />
+                  youremail@example.com <br />
+                  123.456.7890
                 </p>
               </div>
             </div>
@@ -2527,7 +2547,7 @@ like that. do not redistribute. -->
               </p>
             </div>
             <hr />
-            <div class="hidden-anti-consent-container hidden-anti-consent-text">
+            <!-- <div class="hidden-anti-consent-container hidden-anti-consent-text">
               <p>This section has been hidden.</p>
               <a class="undo-anti-consent-btn">(show this section)</a>
             </div>
@@ -2562,10 +2582,6 @@ like that. do not redistribute. -->
 
                 <p><b>Do Trans people actually have the freedom to control our own lives, our own identities, and our own bodies?</b></p>
 
-                <!-- <p>
-                  That freedom cannot exist if being Transgender makes us subject to extraordinary scrutiny.
-                </p> -->
-
                 <p><b>We need the power to live freely, not merely the permission to exist.</b></p>
 
                 <p>
@@ -2582,7 +2598,7 @@ like that. do not redistribute. -->
 
                 <p><b>We deserve to be free to live our lives, with liberty, in the pursuit of happiness.</b></p>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
         <!-- Support Section -->

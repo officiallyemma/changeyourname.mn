@@ -528,7 +528,7 @@ md-text-button {
     gap: 12px;
     /* margin-bottom: 24px; */
     padding-bottom: 16px;
-    border-bottom: 2px solid rgb(39 39 39 / 25%);
+    /* border-bottom: 2px solid rgb(39 39 39 / 25%); */
     justify-content: space-between;
 }
 
@@ -2186,6 +2186,10 @@ div.options .option:hover {
         height: auto;
     }
 
+}
+
+.section-summary {
+    margin-left: 50px;
 }
 
 #runaway-btn {
