@@ -90,6 +90,7 @@ body {
 
 body {
     touch-action: pan-x pan-y;
+    overflow-y: hidden;
 }
 
 
@@ -1145,8 +1146,9 @@ body:not(.loading) .loader-container {
 
 .footer {
     text-align: center;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
+    margin-bottom: 0px;
 
 }
 
@@ -1824,11 +1826,11 @@ a.more-confetti {
 }
 
 .bg-img {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url(/images/bg.webp);
     z-index: -999999;
     /* opacity: .05; */
@@ -1840,23 +1842,29 @@ a.more-confetti {
 }
 
 .bg {
-    /* background: linear-gradient(270deg, #000000, #ffffff); */
-    /* background-size: 600% 600%; */
-    animation: rainbowFlow 30s ease infinite !important;
-    position: fixed;
+
+
+
+
+
+
+    opacity: .5;
+    z-index: -9999;
+    background: linear-gradient(29deg, #ff8fa3, #f582e5, #c084fc, #5eead4, #86efac, #ffb91d) 0 0 / 100% 169%;
+    width: 100vw;
+    height: 103%;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    /* filter: invert(1); */
-    /* mask-image: url('images/bg.webp'); */
-    /* mask-mode: luminance; */
-    /* opacity: 0.1; */
-    background: linear-gradient(90deg, #ff8fa3, #f582e5, #c084fc, #5eead4, #86efac, #fef08a);
-    background-size: 600% 600%;
-    /* filter: brightness(1.2); */
-    opacity: 0.5;
-    z-index: -9999;
+    /* animation: 30s infinite rainbowFlow !important; */
+    /* background-attachment: local; */
+    /* background-size: 100px; */
+    scroll-behavior: none;
+
+
+
+
+
 }
 
 @media screen and (max-width: 767px) {
