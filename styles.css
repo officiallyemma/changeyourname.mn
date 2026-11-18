@@ -1869,12 +1869,12 @@ a.more-confetti {
 
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
     .bg {
         animation: rainbowFlow 45s ease infinite !important;
     }
 
-}
+} */
 
 .special {
     background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #b49a3f, #f9a825, #ff5722);
