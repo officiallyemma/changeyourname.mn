@@ -1850,7 +1850,7 @@ a.more-confetti {
 
     opacity: .5;
     z-index: -9999;
-    background: linear-gradient(29deg, #ff8fa3, #f582e5, #c084fc, #5eead4, #86efac, #ffb91d) 0 0 / 100% 169%;
+    background: linear-gradient(29deg, #ff771d, #f8506f, #f582e5, #c084fc, #5eead4, #89ef86, #ff771d) 0 0 / 100% 169%;
     width: 100vw;
     height: 103%;
     position: absolute;
@@ -1860,6 +1860,8 @@ a.more-confetti {
     /* background-attachment: local; */
     /* background-size: 100px; */
     scroll-behavior: none;
+    background-repeat: repeat;
+    background-position-y: 0%;
 
 
 

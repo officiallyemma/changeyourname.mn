@@ -88,6 +88,8 @@ document.addEventListener('DOMContentLoaded', (): void => {
         });
 
 
+    (document.querySelector('.bg') as HTMLElement).style.backgroundPositionY = `${Math.random() * 100 * 100}%`
+
     document.fonts.ready.then((): void => {
 
 
@@ -393,6 +395,7 @@ document.addEventListener('DOMContentLoaded', (): void => {
             const popover = document.querySelector('.annotate-popover') as HTMLElement;
             if (popover && !popover.contains(event.target as Node)) {
                 closePopover();
+                anno.clearAnnotations();
             }
         };
         document.addEventListener('click', closeIfClickedOutside);
