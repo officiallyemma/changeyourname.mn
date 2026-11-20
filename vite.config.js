@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
+import { execSync } from 'child_process';
+
+const commitHash = execSync('git rev-parse --short HEAD').toString().trim();
 
 export default defineConfig({
     server: {
@@ -20,5 +23,11 @@ export default defineConfig({
             renderLegacyChunks: false,
             modernPolyfills: ['es/global-this'],
         }),
-    ]
+    ],
+    define: {
+        __BUILD_DATE__: JSON.stringify(new Date().toISOString()),
+        __COMMIT_HASH__: JSON.stringify(commitHash),
+    },
 });
+
+

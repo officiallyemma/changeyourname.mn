@@ -13,6 +13,11 @@ import '@material/web/progress/linear-progress.js';
 import '@material/web/textfield/filled-text-field.js';
 // import { createHash } from 'crypto';
 
+
+declare const __COMMIT_HASH__: string;
+declare const __BUILD_DATE__: string;
+(document.querySelector('.buildhash') as HTMLParagraphElement).innerHTML = `${__COMMIT_HASH__} @ ${(new Date(__BUILD_DATE__)).getTime()}`
+
 new Image().src = 'images/bg.webp'; // preload background image
 new Image().src = 'images/skyline.svg'
 // Type definitions

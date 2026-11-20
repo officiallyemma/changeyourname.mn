@@ -1146,10 +1146,16 @@ body:not(.loading) .loader-container {
 
 .footer {
     text-align: center;
-    /* position: absolute; */
+    position: relative;
+    top: 15px;
     width: 100%;
     margin-bottom: 0px;
+    padding-bottom: 0px;
 
+}
+
+.footer .buildhash {
+    color: grey;
 }
 
 .footer p {
