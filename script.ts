@@ -1030,6 +1030,7 @@ if (accessibilityButton) {
         loadSiennaScript().then(() => {
             setTimeout(() => {
                 removeFancyLandingEffects();
+                (document.querySelector('.asw-widget') as HTMLElement).style.display = 'block';
                 (document.querySelector('.asw-widget a') as HTMLElement)?.click();
                 (document.querySelector('button.asw-btn[data-key="monochrome"]') as HTMLElement)?.click();
                 (document.querySelector('button.asw-btn[data-key="stop-animations"]') as HTMLElement)?.click();
