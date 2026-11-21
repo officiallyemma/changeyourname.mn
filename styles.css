@@ -228,6 +228,7 @@ html.aws-filter .card {
     z-index: 999999;
     overflow-y: auto;
     will-change: transform;
+    backdrop-filter: blur(3px);
 }
 
 .nav-drawer.open {
@@ -261,10 +262,6 @@ html.aws-filter .card {
     font-weight: 500;
 }
 
-.nav-item:nth-child(odd):hover {
-    background-color: var(--md-sys-color-secondary-container);
-}
-
 .nav-item .material-symbols-outlined {
     font-size: 32px;
     color: var(--md-sys-color-on-surface-variant);
@@ -279,23 +276,7 @@ html.aws-filter .card {
     transition: color 0.2s ease;
 }
 
-/* Alternating checkmark colors to match nav item background colors exactly */
-.nav-item:nth-child(odd) .nav-checkmark {
-    color: var(--md-sys-color-secondary-container) !important;
-}
 
-.nav-item:nth-child(even) .nav-checkmark {
-    color: var(--md-sys-color-tertiary-container) !important;
-}
-
-/* Checkmark hover effects - turn black */
-.nav-item:nth-child(odd):hover .nav-checkmark {
-    color: var(--md-sys-color-on-surface) !important;
-}
-
-.nav-item:nth-child(even):hover .nav-checkmark {
-    color: var(--md-sys-color-on-surface) !important;
-}
 
 .nav-overlay {
     position: fixed;
@@ -303,7 +284,7 @@ html.aws-filter .card {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -313,6 +294,7 @@ html.aws-filter .card {
 .nav-overlay.visible {
     opacity: 1;
     visibility: visible;
+    backdrop-filter: blur(5px);
 }
 
 /* Button styles */
@@ -1041,9 +1023,6 @@ amp-img {
     border-radius: 12px;
 }
 
-.nav-item:nth-child(even):hover {
-    background-color: var(--md-sys-color-tertiary-container);
-}
 
 .section-header-buttons {
     display: flex;
