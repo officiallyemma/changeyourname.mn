@@ -1,4 +1,4 @@
-<img width="5160" height="546" alt="logo" src="https://github.com/user-attachments/assets/c8cf8db1-dd9e-46c0-8e2d-120c9a49cca5" />
+<img width="5084" height="457" alt="logo2" src="https://github.com/user-attachments/assets/ac8ea65a-306b-48b0-8a9b-8d20514d9368" />
 
 ChangeYourName.MN is an (unofficial\*) guide and court form generator for legal name and gender marker changes in Minnesota. Funded by the community, this project focuses on helping Trans Minnesotans complete the long and overcomplicated name change process with confidence.
 
@@ -7,7 +7,7 @@ Coming soon:
 - Birth Certificate Amendment or Replacement
 - Another State for the form generator!
 
-<img width="1350" height="954" alt="image" src="https://github.com/user-attachments/assets/20031996-42ff-4fbe-a3a2-c89583c45489" />
+<img width="1357" height="950" alt="demo" src="https://github.com/user-attachments/assets/925a7e07-f277-465d-b73c-44b28d9e9f3f" />
 
 ---
 
