@@ -2092,7 +2092,11 @@ div.options {
     display: flex;
     gap: 25px;
     transition: transform 0.3s ease-in-out;
+}
 
+.scope-explainer {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 @media screen and (max-width: 1000px) {
