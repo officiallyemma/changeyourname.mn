@@ -1005,10 +1005,10 @@ document.addEventListener('DOMContentLoaded', (): void => {
 });
 
 // ACCESSIBILITY WIDGET
-function loadSiennaScript(): Promise<void> {
+function loadSiennaScript(): Promise<boolean> {
     return new Promise((resolve, reject) => {
         if (document.querySelector('script[src="sienna.min.js"]')) {
-            resolve();
+            resolve(false);
             return;
         }
 
@@ -1017,7 +1017,7 @@ function loadSiennaScript(): Promise<void> {
         script.defer = true;
         script.async = true;
 
-        script.addEventListener('load', () => resolve());
+        script.addEventListener('load', () => resolve(true));
         script.addEventListener('error', () => reject(new Error('Failed to load script')));
 
         document.head.appendChild(script);
@@ -1027,14 +1027,28 @@ function loadSiennaScript(): Promise<void> {
 const accessibilityButton = document.querySelector('#accessibility') as HTMLElement;
 if (accessibilityButton) {
     accessibilityButton.addEventListener('click', (): void => {
-        loadSiennaScript().then(() => {
-            setTimeout(() => {
-                removeFancyLandingEffects();
-                (document.querySelector('.asw-widget') as HTMLElement).style.display = 'block';
-                (document.querySelector('.asw-widget a') as HTMLElement)?.click();
+        loadSiennaScript().then((didLoad: boolean) => {
+            // setTimeout(() => {
+            removeFancyLandingEffects();
+            (document.querySelector('.asw-widget') as HTMLElement).style.display = 'block';
+            (document.querySelector('.asw-widget a') as HTMLElement)?.click();
+
+            if (didLoad) {
+                let settings = JSON.parse(localStorage.getItem('asw-user-settings') ?? '{ "states": {} }')
+                if (settings.states['contrast'] !== 'monochrome') {
+                    (document.querySelector('button.asw-btn[data-key="monochrome"]') as HTMLElement)?.click();
+                }
+                if (!settings.states['stop-animations']) {
+                    (document.querySelector('button.asw-btn[data-key="stop-animations"]') as HTMLElement)?.click();
+                }
+            } else {
                 (document.querySelector('button.asw-btn[data-key="monochrome"]') as HTMLElement)?.click();
                 (document.querySelector('button.asw-btn[data-key="stop-animations"]') as HTMLElement)?.click();
-            }, 500)
+            }
+
+            //     (document.querySelector('button.asw-btn[data-key="monochrome"]') as HTMLElement)?.click();
+            //     (document.querySelector('button.asw-btn[data-key="stop-animations"]') as HTMLElement)?.click();
+            // }, 1500)
         });
     });
 }
